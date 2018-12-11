@@ -7,6 +7,7 @@ def WindowsEventCode(URL):
 
     soup = bs4.BeautifulSoup(res.text, 'html.parser')
 
+    #select the CSS selector section of the object I want to display
     elems = soup.select('#contentMargin > p.hey')
     print(elems[0].text.strip())
 
