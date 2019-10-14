@@ -20,7 +20,8 @@ o = open("output.txt", "w")
 ip = raw_input("Enter the IP: ")
 
 for line in p.readlines():
-    o.write ("start " +  "http://" + ip + ":" + (line) + "start " +  "https://" + ip + ":" + (line))
+    o.write("start " + "http://" + ip + ":" + (line) +
+            "start " + "https://" + ip + ":" + (line))
 
 p.close()
 o.close()

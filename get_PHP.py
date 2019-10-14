@@ -1,5 +1,5 @@
-# This script will take a file call urls.txt and grab the headers and 
-# then if the headers contains the phrase "php" it'll save it to the 
+# This script will take a file call urls.txt and grab the headers and
+# then if the headers contains the phrase "php" it'll save it to the
 # output.txt file with the url, example output below
 
 # https://portal.digitalbusiness.telstra.com
