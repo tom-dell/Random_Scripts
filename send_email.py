@@ -1,20 +1,20 @@
 import smtplib
 
-#connect to smtp server
+# connect to smtp server
 connection = smtplib.SMTP('smtp.gmail.com', 587)
 
-#check connection to SMTP server
+# check connection to SMTP server
 print(connection.ehlo())
 
-#start TLS encryption
+# start TLS encryption
 connection.starttls()
 
-#pass credentials
+# pass credentials
 connection.login('jane.doe@gmail.com', 'PASSWORD')
 
-#send a email FROMM - TO - headers (subject then 2 line breaks to get to body) - body
-connection.sendmail('jane.doe@gmail.com', 'john.doe@gmail.com', 'subject: Test\n\nThis should only go to outlook')
+# send a email FROMM - TO - headers (subject then 2 line breaks to get to body) - body
+connection.sendmail('jane.doe@gmail.com', 'john.doe@gmail.com',
+                    'subject: Test\n\nThis should only go to outlook')
 
-#close the connection
+# close the connection
 connection.quit()
-

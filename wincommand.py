@@ -29,25 +29,24 @@ explorer c:\users\tom -----------------------open the path where the text files 
 """
 
 
-
-
-
 import os
 o = open("output.txt", "w")
 
-#ask for the IP, and then asks if the user wants to enter name, or choose
+# ask for the IP, and then asks if the user wants to enter name, or choose
 ip = input("enter the IP: ")
 name = input("Press 1 to enter a name, press 2 to skip (this will not add the command to open the location of the text files). ")
 
-#user will enter their own name, will write commands using entered name
+# user will enter their own name, will write commands using entered name
 if name == "1":
     name1 = input("enter your username on this host: ")
-    o.write ("net accounts > " + ip + "accounts.txt" + "\n" + "netstat -a > " + ip + "ports.txt" + "\n" + "C:\Windows\System32\lusrmgr.msc" + "\n" + r"explorer c:\users\\" + name1 + "\n")
+    o.write("net accounts > " + ip + "accounts.txt" + "\n" + "netstat -a > " + ip + "ports.txt" +
+            "\n" + "C:\Windows\System32\lusrmgr.msc" + "\n" + r"explorer c:\users\\" + name1 + "\n")
 
 if name == "2":
-    o.write ("net accounts > " + ip + "accounts.txt" + "\n" + "netstat -a > " + ip + "ports.txt" + "\n" + "C:\Windows\System32\lusrmgr.msc")
+    o.write("net accounts > " + ip + "accounts.txt" + "\n" + "netstat -a > " +
+            ip + "ports.txt" + "\n" + "C:\Windows\System32\lusrmgr.msc")
 
-#close output.txt, open notepad and output.txt
+# close output.txt, open notepad and output.txt
 o.close()
 osCommandString = "notepad.exe output.txt"
 os.system(osCommandString)
